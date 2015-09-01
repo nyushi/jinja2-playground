@@ -1,0 +1,16 @@
+<html>
+  <title>jinja2 playground</title>
+  <body>
+    <h2>Variables(yaml)</h2>
+    <textarea id="vars" cols=100 rows=10></textarea>
+    <h2>Template(jinja2)</h2>
+    <textarea id="tmpl" cols=100 rows=10></textarea>
+    <br />
+    <form action="javascript:render();">
+      <input type="submit" value="render" onclick="javascript:render();" />
+    </form>
+    <pre id="result"></pre>
+    <script type=text/javascript src=superagent-1.3.0.js></script>
+    <script type=text/javascript src=main.js></script>
+  </body>
+</html>
