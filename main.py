@@ -1,6 +1,7 @@
 from flask import Flask, redirect, request, send_from_directory
 import jinja2
 import yaml
+import sys
 
 
 app = Flask(__name__)
@@ -33,4 +34,7 @@ def render():
 
 
 if __name__ == "__main__":
-    app.run()
+    kwargs = {}
+    if len(sys.argv) > 1:
+        kwargs['host'] = sys.argv[1]
+    app.run(**kwargs)
